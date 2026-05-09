@@ -1,0 +1,31 @@
+{
+  "name": "api",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node src/main.js",
+    "start": "node src/main.js",
+    "lint": "eslint . --quiet",
+    "seed:mysql": "node scripts/seed-mysql.mjs"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "mysql2": "^3.15.3",
+    "nodemailer": "^8.0.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^15.14.0"
+  }
+}

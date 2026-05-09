@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Preventivos CL Branding */
+    /* Primary Blue - #1E40AF */
+    --primary: 224 71% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Orange - #F59E0B */
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Success Green */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Destructive/Alert Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Neutral Grays - Clean Minimalist App Look */
+    --background: 0 0% 99%;
+    --foreground: 222 47% 11%;
+    
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 16% 47%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --border: 214 32% 90%;
+    --input: 214 32% 90%;
+    --ring: 224 71% 40%;
+    
+    --accent: 210 40% 95%;
+    --accent-foreground: 222 47% 11%;
+    
+    --radius: 0.75rem; /* Rounded-xl by default for modern look */
+  }
+  
+  .dark {
+    --primary: 224 71% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* True Dark Slate */
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%;
+    
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 71% 50%;
+    
+    --accent: 217 33% 15%;
+    --accent-foreground: 210 40% 98%;
+  }
+  
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Input text contrast safe-guard */
+  input, textarea, select {
+    color: hsl(var(--foreground));
+  }
+  input::placeholder, textarea::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+}

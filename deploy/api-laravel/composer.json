@@ -1,0 +1,39 @@
+{
+    "name": "preventivos/api",
+    "type": "project",
+    "description": "Preventivos CL API - Laravel PHP",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^11.0",
+        "firebase/php-jwt": "^6.10",
+        "laravel/tinker": "^2.9"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Migrations\\": "database/migrations/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    }
+}

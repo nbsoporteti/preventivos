@@ -1,0 +1,5 @@
+node_modules/
+deploy/*.zip
+apps/api/.env
+apps/web/.env
+apps/web/.env.production
